@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div id="loading">
+    <progress class="progress is-large is-primary" max="100"></progress>
+  </div>
+  <br/>
+  <div class="notification is-info is-light">
+    It would take a few minutes...
+  </div>
+{% endblock content %}
+
+{% block script %}
+  <script type="text/javascript">
+    window.localStorage.clear();
+    $.ajax({
+      type: "POST",
+      url: "/mindmap",
+      success: function() {
+          window.location.replace("/mindmap");
+      }
+    });
+  </script>
+{% endblock script %}

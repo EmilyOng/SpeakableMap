@@ -1,0 +1,9 @@
+uploads/
+models/
+dataset/exported-models
+dataset/pretrained_models
+static/saved_model
+static/speakable-map.json
+__pycache__
+.DS_Store
+.vscode

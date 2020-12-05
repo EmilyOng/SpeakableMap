@@ -1,0 +1,9 @@
+Flask
+werkzeug
+numpy==1.17.3
+google-cloud-vision
+opencv-python
+tensorflow-cpu
+Pillow
+object_detection
+gunicorn

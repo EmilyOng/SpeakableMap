@@ -1,0 +1,8 @@
+#instructions {
+  border: 1px dotted;
+  padding: 20px 20px 20px 20px;
+}
+
+.content{
+  overflow-y: auto;
+}

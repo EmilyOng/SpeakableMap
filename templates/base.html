@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Speakable Map"/>
+    <meta name="author" content="Emily Ong"/>
+    <title>Speakable Map</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='libraries/css/bulma.min.css') }}"/>
+    <link rel="icon" sizes="16x16" href="{{ url_for('static', filename='logo/favicon.ico') }}">
+    <link rel="icon" sizes="180x180" href="{{ url_for('static', filename='logo/apple-touch-icon.png') }}">
+    <link rel="icon" sizes="32x32" href="{{ url_for('static', filename='logo/favicon-32x32.png') }}">
+    <link rel="icon" sizes="16x16" href="{{ url_for('static', filename='logo/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='logo/site.webmanifest') }}">
+    {% block header %}
+    {% endblock header %}
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href=".">
+            <img src="{{ url_for('static', filename='logo/logo.png') }}" width="28" height="28">
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarElems">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarElems" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="{{ url_for('about') }}">
+              About
+            </a>
+            {% if hasData %}
+              <a class="navbar-item" href="{{ url_for('mindmap') }}">
+                Mindmap
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+      <br/>
+      {% block content %}
+      {% endblock content %}
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='libraries/js/jquery-3.5.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='libraries/js/bulma-toast.min.js') }}"></script>
+    <script type="text/javascript" defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    {% block script %}
+    {% endblock script %}
+  </body>
+</html>
