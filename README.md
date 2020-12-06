@@ -84,7 +84,7 @@ Thus, we use the Tensorflow Object Detection API (Application Programming Interf
 
 ## Text Recognition
 
-Fig. 8: Visualisation box
+![Visualisation](docs/images/results/example_pen.jpg)
 
 To generate the bounding boxes, we use the ```visualize_boxes_and_labels_on_image_array``` ​helper from the object_detection library, which generates 100 possible detection boxes. We selectively filter the detection boxes based on a predefined threshold to obtain detection boxes with a reasonable level of accuracy. The image is then cropped using the coordinates of the bounding box and converted to grayscale. We use the Google Cloud Vision API to recognise the text within the image.
 
