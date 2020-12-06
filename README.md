@@ -15,15 +15,19 @@ A mind map is a non-linear visual representation of concepts, often originating 
 The proposed solution defined in this project takes a sketch/image of a mind map and converts it to interactive elements on a HTML canvas, which supports mind-mapping and text-to-speech. To generalise the structure of a mind map, we define three key features:
 
 1. Ellipse (to represent a main topic/sub-topic)
+
 ![Ellipse](docs/images/ellipse.png)
 
 2. Rectangle (to represent an idea)
+
 ![Rectangle](docs/images/rectangle.png)
 
 3. Arrows/Lines (to represent connections between nodes)
+
 ![Arrow](docs/images/arrow.png)
 
 An example of a defined mind map:
+
 ![Example Marker](docs/images/examples/example_marker.jpg)
 
 ![Example Pen](docs/images/examples/example_pen.png)
